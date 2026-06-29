@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTx3L3I-JCGChYJ8VI-L6OO-au7B2xY-d47aaa5a6cb3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTxwL3I-JCGChYJ8VI-L6OO-au7B4-Lw-3E-6c61ba2d941a.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTxwL3I-JCGChYJ8VI-L6OO-au7B4873-3E-5239fa7ab8be.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTxwL3I-JCGChYJ8VI-L6OO-au7B46r2-3E-5e1a3142d2b0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTxwL3I-JCGChYJ8VI-L6OO-au7B47b1-3E-08af9cb467b9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-HTxwL3I-JCGChYJ8VI-L6OO-au7B45L0-3E-9b9656dc1015.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-UcCO3FwrK3iLTeHuS-nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg-e36895724ccb.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-UcCO3FwrK3iLTeHuS-nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg-bad5f68b18b9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-UcCO3FwrK3iLTeHuS-nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg-11e1d80f42f9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-UcCO3FwrK3iLTeHuS-nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg-e9191f0db3ed.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/fonts-gstatic-com-UcCO3FwrK3iLTeHuS-nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg-1be3d765b0bd.ttf) format('truetype');
+}

@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7e8">
+  <title>B.BON Sports Wear | Colorful Theme Concept</title>
+  <meta name="description" content="Colorful homepage concept for B.BON Sports Wear, a custom sportswear manufacturer in Mumbai.">
+  <link rel="stylesheet" href="assets/css/google-fonts.css">
+  <style>
+    :root {
+      --bg: #fff7e8;
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #59657a;
+      --line: #eadfcf;
+      --red: #e5322b;
+      --blue: #1066d8;
+      --green: #00a378;
+      --yellow: #f3b329;
+      --pink: #f04b8c;
+      --purple: #6952d6;
+      --shadow: 0 24px 70px rgba(35, 49, 76, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(16, 102, 216, 0.08) 0 1px, transparent 1px 100%),
+        linear-gradient(0deg, rgba(229, 50, 43, 0.06) 0 1px, transparent 1px 100%),
+        var(--bg);
+      background-size: 42px 42px;
+      color: var(--ink);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .display {
+      font-family: "Barlow Condensed", "Inter", sans-serif;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 247, 232, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 26px;
+      font-weight: 900;
+      box-shadow: 7px 7px 0 var(--yellow), 14px 14px 0 rgba(16, 102, 216, 0.18);
+    }
+
+    .logo-word {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .desktop-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .desktop-links a {
+      padding: 10px 12px;
+      color: #39465e;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .desktop-links a:hover,
+    .desktop-links .active {
+      color: var(--blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 14px 20px;
+      border: 2px solid transparent;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .btn:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 7px 7px 0 rgba(23, 32, 51, 0.16);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--ink);
+      box-shadow: 5px 5px 0 var(--yellow);
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--ink);
+      box-shadow: 5px 5px 0 rgba(16, 102, 216, 0.25);
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 50px 0 42px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(108deg, rgba(255, 247, 232, 0.98) 0%, rgba(255, 247, 232, 0.88) 45%, rgba(255, 247, 232, 0.35) 100%),
+        url("assets/images/images-unsplash-com-photo-1571902943202-507ec2618e8f-5e2c843d0dbb.jpg") center right / cover no-repeat;
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: 100px;
+      width: 46vw;
+      min-width: 360px;
+      height: 46vw;
+      min-height: 360px;
+      background:
+        linear-gradient(90deg, transparent 0 42%, rgba(229, 50, 43, 0.28) 42% 58%, transparent 58%),
+        linear-gradient(0deg, transparent 0 42%, rgba(16, 102, 216, 0.24) 42% 58%, transparent 58%);
+      transform: rotate(-8deg);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) 380px;
+      align-items: center;
+      gap: 52px;
+      min-height: 500px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 8px;
+      background: linear-gradient(90deg, var(--red) 0 33%, var(--yellow) 33% 66%, var(--green) 66%);
+      border: 1px solid var(--ink);
+    }
+
+    h1 {
+      margin: 22px 0 0;
+      max-width: 830px;
+      font-size: 88px;
+      line-height: 0.9;
+      font-weight: 900;
+    }
+
+    h1 span {
+      color: var(--red);
+      text-shadow: 4px 4px 0 rgba(243, 179, 41, 0.55);
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      margin: 26px 0 0;
+      color: #435069;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 640px;
+      margin-top: 42px;
+    }
+
+    .stat {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 18px;
+      box-shadow: 7px 7px 0 rgba(16, 102, 216, 0.16);
+    }
+
+    .stat:nth-child(2) {
+      box-shadow: 7px 7px 0 rgba(229, 50, 43, 0.16);
+    }
+
+    .stat:nth-child(3) {
+      box-shadow: 7px 7px 0 rgba(0, 163, 120, 0.16);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-card {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 12px;
+      box-shadow: 12px 12px 0 var(--yellow);
+      transform: rotate(1.5deg);
+    }
+
+    .hero-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 2px solid var(--ink);
+    }
+
+    .build-note {
+      padding: 18px 8px 6px;
+    }
+
+    .build-note small {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .build-note h2 {
+      margin: 3px 0 4px;
+      font-size: 31px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .ribbon {
+      background: var(--ink);
+      color: #fff;
+      overflow: hidden;
+      border-block: 2px solid var(--ink);
+    }
+
+    .ribbon-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 28px;
+      padding: 20px 0;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .ribbon-row span::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 12px;
+      background: var(--yellow);
+      border: 1px solid #fff;
+      vertical-align: 0;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 12px 0 0;
+      max-width: 680px;
+      font-size: 64px;
+      line-height: 0.95;
+      font-weight: 900;
+    }
+
+    .section-head p {
+      max-width: 430px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      overflow: hidden;
+      box-shadow: 8px 8px 0 rgba(23, 32, 51, 0.1);
+    }
+
+    .product:nth-child(1) {
+      box-shadow: 8px 8px 0 rgba(229, 50, 43, 0.22);
+    }
+
+    .product:nth-child(2) {
+      box-shadow: 8px 8px 0 rgba(16, 102, 216, 0.22);
+    }
+
+    .product:nth-child(3) {
+      box-shadow: 8px 8px 0 rgba(0, 163, 120, 0.22);
+    }
+
+    .product:nth-child(4) {
+      box-shadow: 8px 8px 0 rgba(240, 75, 140, 0.22);
+    }
+
+    .product img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .product div {
+      padding: 18px;
+    }
+
+    .product h3 {
+      margin: 0;
+      font-size: 29px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .product p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .custom-zone {
+      background:
+        linear-gradient(135deg, rgba(16, 102, 216, 0.08), rgba(0, 163, 120, 0.08)),
+        #fffdf7;
+      border-block: 2px solid var(--ink);
+    }
+
+    .custom-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .custom-media {
+      border: 2px solid var(--ink);
+      box-shadow: 10px 10px 0 var(--green);
+      background: #fff;
+      padding: 10px;
+    }
+
+    .custom-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+      border: 2px solid var(--ink);
+    }
+
+    .custom-panel {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 44px;
+      box-shadow: 12px 12px 0 rgba(105, 82, 214, 0.2);
+    }
+
+    .custom-panel h2 {
+      margin: 12px 0 16px;
+      font-size: 62px;
+      line-height: 0.94;
+      font-weight: 900;
+    }
+
+    .tag-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      border: 2px solid var(--ink);
+      padding: 16px;
+      background: #fff;
+      font-weight: 900;
+    }
+
+    .tag:nth-child(1) {
+      background: rgba(243, 179, 41, 0.24);
+    }
+
+    .tag:nth-child(2) {
+      background: rgba(16, 102, 216, 0.14);
+    }
+
+    .tag:nth-child(3) {
+      background: rgba(0, 163, 120, 0.14);
+    }
+
+    .tag:nth-child(4) {
+      background: rgba(240, 75, 140, 0.14);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .step {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 24px;
+      min-height: 210px;
+    }
+
+    .step:nth-child(1) {
+      box-shadow: 8px 8px 0 rgba(229, 50, 43, 0.2);
+    }
+
+    .step:nth-child(2) {
+      box-shadow: 8px 8px 0 rgba(16, 102, 216, 0.2);
+    }
+
+    .step:nth-child(3) {
+      box-shadow: 8px 8px 0 rgba(0, 163, 120, 0.2);
+    }
+
+    .step:nth-child(4) {
+      box-shadow: 8px 8px 0 rgba(243, 179, 41, 0.34);
+    }
+
+    .step b {
+      color: var(--red);
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .step h3 {
+      margin: 36px 0 10px;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .step p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .cta {
+      background:
+        linear-gradient(90deg, var(--red), var(--blue) 50%, var(--green));
+      color: #fff;
+      padding: 64px 0;
+      border-block: 2px solid var(--ink);
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: 68px;
+      line-height: 0.92;
+      font-weight: 900;
+    }
+
+    .cta p {
+      max-width: 620px;
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .cta .btn-primary {
+      background: #fff;
+      color: var(--blue);
+      border-color: #fff;
+      box-shadow: 5px 5px 0 rgba(23, 32, 51, 0.24);
+    }
+
+    .cta .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+
+    .site-footer {
+      background: #172033;
+      color: #d6dbe6;
+      padding: 52px 0 26px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 36px;
+    }
+
+    .site-footer h3,
+    .site-footer h4 {
+      color: #fff;
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .site-footer p,
+    .site-footer li {
+      color: #adb7c8;
+      font-size: 14px;
+    }
+
+    .site-footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      margin-top: 40px;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #8f9bad;
+      font-size: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .desktop-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .hero-grid,
+      .custom-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        min-height: auto;
+      }
+
+      .hero {
+        padding: 50px 0 46px;
+      }
+
+      h1 {
+        font-size: 72px;
+      }
+
+      .section-head h2,
+      .custom-panel h2 {
+        font-size: 54px;
+      }
+
+      .cta h2 {
+        font-size: 58px;
+      }
+
+      .product-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-head,
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .hero {
+        padding: 42px 0 34px;
+      }
+
+      .product-grid,
+      .process-grid,
+      .tag-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        display: none;
+      }
+
+      .btn {
+        min-height: 44px;
+        padding: 12px 14px;
+        font-size: 11px;
+      }
+
+      .section-head h2,
+      .custom-panel h2,
+      .cta h2 {
+        font-size: 42px;
+      }
+
+      .hero-card {
+        display: none;
+      }
+
+      .section,
+      .custom-zone {
+        padding: 62px 0;
+      }
+
+      .custom-panel {
+        padding: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="B.BON Sports Wear home">
+        <span class="logo-mark">B</span>
+        <span class="logo-word">B.BON<span style="color: var(--red)">.</span></span>
+      </a>
+      <nav class="desktop-links" aria-label="Main navigation">
+        <a href="index-light.html">Light</a>
+        <a class="active" href="index-colorful.html">Colorful</a>
+        <a href="products.html">Products</a>
+        <a href="custom-sportswear.html">Custom Sportswear</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="catalogue.pdf" download>Catalogue</a>
+        <a class="btn btn-red" href="tel:+919967132425">Call Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">30+ Years - Mumbai - Custom Teamwear</div>
+          <h1 class="display">Sportswear that makes every team <span>stand out</span></h1>
+          <p class="hero-copy">A brighter homepage option for B.BON with confident red, blue, green and yellow accents. It keeps the page light while giving the brand more motion, energy and shelf appeal.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="catalogue.pdf" download>Download Catalogue</a>
+            <a class="btn btn-red" href="tel:+919967132425">Call Now</a>
+            <a class="btn btn-outline" href="products.html">View Products</a>
+          </div>
+          <div class="stats" aria-label="B.BON highlights">
+            <div class="stat"><strong>30+</strong><span>Years Crafting</span></div>
+            <div class="stat"><strong>1000+</strong><span>Teams Served</span></div>
+            <div class="stat"><strong>100%</strong><span>Custom Built</span></div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Featured build">
+          <img src="assets/images/images-unsplash-com-photo-1577212017308-55c4d60d2609-f2dbc0d6217d.jpg" alt="Custom sublimation sports jersey">
+          <div class="build-note">
+            <small>Featured Build</small>
+            <h2 class="display">Full Sublimation Jersey</h2>
+            <p>Name - Number - Logo - Full Digital Print</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ribbon" aria-label="Trust highlights">
+      <div class="container ribbon-row">
+        <span>30+ Years Experience</span>
+        <span>Custom Branding</span>
+        <span>Team Uniforms</span>
+        <span>Corporate Orders</span>
+        <span>Mumbai Manufacturer</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Product Range</div>
+            <h2 class="display">A colorful catalogue layout with stronger visual rhythm</h2>
+          </div>
+          <p>Use this direction when the client wants a friendly, energetic homepage that still looks organized and professional.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product">
+            <img src="assets/images/images-unsplash-com-photo-1521572163474-6864f9cf17ab-2c53818fc904.jpg" alt="Round neck t-shirts">
+            <div><h3 class="display">T-Shirts</h3><p>Round necks, polos, tipping collars and branded team tees.</p></div>
+          </article>
+          <article class="product">
+            <img src="assets/images/images-unsplash-com-photo-1586363104862-3a5e2ab60d99-1da9c71c1067.jpg" alt="Sports jerseys">
+            <div><h3 class="display">Jerseys</h3><p>Cricket, football, gym, school and corporate team jerseys.</p></div>
+          </article>
+          <article class="product">
+            <img src="assets/images/images-unsplash-com-photo-1618354691373-d851c5c3a990-050246dbdf45.jpg" alt="Track pants">
+            <div><h3 class="display">Track Pants</h3><p>Comfortable performance bottoms for training and events.</p></div>
+          </article>
+          <article class="product">
+            <img src="assets/images/images-unsplash-com-photo-1552902865-b72c031ac5ea-40a903c22b13.jpg" alt="Sports jackets">
+            <div><h3 class="display">Jackets</h3><p>Smart outerwear with custom logo and color options.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section custom-zone">
+      <div class="container custom-grid">
+        <div class="custom-media">
+          <img src="assets/images/images-unsplash-com-photo-1526232761682-d26e03ac148e-d4b3fdfb2fbc.jpg" alt="Team sportswear in action">
+        </div>
+        <div class="custom-panel">
+          <div class="eyebrow">Custom Work</div>
+          <h2 class="display">Designed around your team colors, logos and event goals</h2>
+          <p>Color blocking and crisp borders make customization feel tangible. This variant is more expressive than the simple light option while keeping everything readable.</p>
+          <div class="tag-grid" aria-label="Customization options">
+            <div class="tag">Logo Printing</div>
+            <div class="tag">Names & Numbers</div>
+            <div class="tag">Team Colors</div>
+            <div class="tag">Bulk Orders</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Order Flow</div>
+            <h2 class="display">Clear steps from first brief to final dispatch</h2>
+          </div>
+          <p>The colorful cards keep each stage easy to scan without falling back into the rejected dark theme.</p>
+        </div>
+        <div class="process-grid">
+          <article class="step"><b>01</b><h3 class="display">Share Brief</h3><p>Tell B.BON the product type, quantity, colors and branding requirements.</p></article>
+          <article class="step"><b>02</b><h3 class="display">Finalize Design</h3><p>Review logo placement, names, numbers, print style and sizing details.</p></article>
+          <article class="step"><b>03</b><h3 class="display">Production</h3><p>Sportswear is manufactured with the agreed fabric, fit and finishing.</p></article>
+          <article class="step"><b>04</b><h3 class="display">Dispatch</h3><p>Completed orders are packed and delivered for your team or event.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2 class="display">Get a bright custom kit ready for your team</h2>
+          <p>Call B.BON or request a quote on WhatsApp for jerseys, t-shirts, track pants, jackets and full team uniforms.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/919967132425?text=Hi%20B.BON%2C%20I'd%20like%20to%20request%20a%20quote%20for%20sportswear." target="_blank" rel="noreferrer">WhatsApp Quote</a>
+          <a class="btn btn-outline" href="catalogue.pdf" download>Catalogue</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="display">B.BON Sports Wear</h3>
+          <p>Premium custom sportswear manufacturer based in Malad West, Mumbai. Trusted for teams, corporates, gyms, schools and retail buyers.</p>
+        </div>
+        <div>
+          <h4 class="display">Quick Links</h4>
+          <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="custom-sportswear.html">Custom Sportswear</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="display">Contact</h4>
+          <ul>
+            <li>Malwani Church, Bhandarwada, Marve Road, Malad West, Mumbai - 400095</li>
+            <li><a href="tel:+919967132425">+91 9967132425</a> / <a href="tel:+919987241451">+91 9987241451</a></li>
+            <li><a href="mailto:bbonsportswear@gmail.com">bbonsportswear@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/b.bon_sportswear/" target="_blank" rel="noopener noreferrer" aria-label="B.BON Sports Wear on Instagram">@b.bon_sportswear</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>(c) 2026 B.BON Sports Wear. All rights reserved.</span>
+        <span>Custom Sportswear Manufacturer - Mumbai</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
