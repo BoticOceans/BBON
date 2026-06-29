@@ -81,6 +81,9 @@
             color: #fff;
         }
         main { padding: 34px 0 60px; }
+        body.admin-auth-page main {
+            padding: 42px 0 70px;
+        }
         .page-head {
             display: flex;
             justify-content: space-between;
@@ -227,18 +230,108 @@
             background: #f7f9fb;
         }
         .pagination { margin-top: 18px; }
+        .auth-layout {
+            min-height: calc(100vh - 190px);
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
+            align-items: center;
+            gap: 54px;
+        }
+        .auth-copy {
+            max-width: 620px;
+        }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--red);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .eyebrow::before {
+            content: "";
+            width: 36px;
+            height: 2px;
+            background: var(--red);
+        }
+        .auth-copy h1 {
+            margin-top: 18px;
+            font-size: clamp(42px, 6vw, 76px);
+            max-width: 620px;
+        }
+        .auth-copy p {
+            max-width: 560px;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.65;
+        }
+        .auth-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+        .auth-points span {
+            border: 1px solid var(--line);
+            background: #fff;
+            padding: 10px 12px;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .auth-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+            padding: 34px;
+        }
+        .login-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+        .login-mark span {
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            background: var(--red);
+            color: #fff;
+        }
+        .auth-card h2 {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+        .auth-card form {
+            margin-top: 26px;
+        }
+        .auth-submit {
+            width: 100%;
+            padding: 14px 16px;
+        }
         @media (max-width: 800px) {
             .topbar-inner,
             .page-head { align-items: flex-start; flex-direction: column; }
             .stats,
             .grid-2,
             .grid-3 { grid-template-columns: 1fr; }
+            .auth-layout { grid-template-columns: 1fr; gap: 28px; }
+            .auth-copy h1 { font-size: 42px; }
+            .auth-card { padding: 24px; }
             table { min-width: 720px; }
             .table-wrap { overflow-x: auto; }
         }
     </style>
 </head>
-<body>
+<body class="@yield('body_class')">
     <div class="shell">
         <header class="topbar">
             <div class="wrap topbar-inner">

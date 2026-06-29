@@ -21,15 +21,20 @@ class AdminAuthController extends Controller
     public function login(Request $request): RedirectResponse
     {
         $validated = $request->validate([
+            'email' => ['required', 'email'],
             'password' => ['required', 'string'],
         ]);
 
+        $adminEmail = (string) env('ADMIN_EMAIL', 'bbonsportswear@gmail.com');
         $adminPassword = (string) env('ADMIN_PASSWORD', 'admin123');
 
-        if (! hash_equals($adminPassword, $validated['password'])) {
+        $emailMatches = hash_equals(strtolower($adminEmail), strtolower($validated['email']));
+        $passwordMatches = hash_equals($adminPassword, $validated['password']);
+
+        if (! $emailMatches || ! $passwordMatches) {
             return back()
-                ->withErrors(['password' => 'The admin password is incorrect.'])
-                ->onlyInput();
+                ->withErrors(['email' => 'These admin credentials are incorrect.'])
+                ->onlyInput('email');
         }
 
         $request->session()->regenerate();
